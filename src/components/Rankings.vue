@@ -2,12 +2,19 @@
   <div>
     <table class="ranking table">
       <tbody>
-        <tr v-for="(score, index) in sortedScores">
-          <th>#&nbsp{{ index + 1 }}</th>
-          <td>{{ score.name }}</td>
-          <td>{{ numberWithCommas(score.score) }}</td>
-          <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
-        </tr>
+        <transition-group
+        appear-class="flash"
+        name="rankings"
+        tag="tr"
+        >
+          <tr v-for="(score, index) in sortedScores" :key="score.name">
+            <th>#&nbsp{{ index + 1 }}</th>
+            <td>{{ score.name }}</td>
+            <td>{{ numberWithCommas(score.score) }}</td>
+            <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
+          </tr>
+        </transition-group>
+
       </tbody>
     </table>
   </div>
@@ -15,6 +22,8 @@
 
 <script>
   import db from 'db';
+  import 'animate.css/animate.css';
+
 
   export default {
     name: 'rankings',
