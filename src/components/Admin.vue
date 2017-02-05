@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      Rankings
+      Admin
     </p>
     <table>
       <tbody>
@@ -17,7 +17,7 @@
 
 <script>
   export default {
-    name: 'rankings',
+    name: 'admin',
     data() {
       return {
         contestants: [
@@ -28,4 +28,5 @@
       };
     },
   };
+
 </script>
