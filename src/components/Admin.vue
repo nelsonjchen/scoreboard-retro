@@ -4,11 +4,11 @@
     <div class="control">
       <label class="label">Name</label>
       <p class="control">
-        <input required v-model="name" class="input" type="text" placeholder="Gamer McGamerface">
+        <input ref="name" required v-model="name" class="input" type="text" placeholder="Gamer McGamerface">
       </p>
       <label class="label">Score</label>
       <p class="control">
-        <input required v-model="score" class="input" type="number" placeholder="8888">
+        <input required v-model="score" class="input" type="number" placeholder="8888" @keyup.enter="addOrUpdateScore">
       </p>
       <p class="control">
         <a :disabled="!validScore" class="button" @click="addOrUpdateScore">Update or Add Score</a>
@@ -50,6 +50,9 @@
         );
       },
       addOrUpdateScore() {
+        if (!(this.validScore)) {
+          return;
+        }
         this.$firebaseRefs.scores.orderByChild('name').equalTo(this.name).limitToFirst(1).once('value', (snapshot) => {
           if (snapshot.val() === null) {
             this.$firebaseRefs.scores.push(
@@ -68,6 +71,7 @@
         });
         this.name = '';
         this.score = null;
+        this.$refs.name.focus();
       },
     },
     computed: {
