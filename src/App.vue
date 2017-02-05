@@ -24,7 +24,7 @@ export default {
 
 <style >
   .logo {
-    max-height: 30vh;
+    max-height: 25vh;
     margin: auto;
     display: block;
   }
