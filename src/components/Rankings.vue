@@ -5,7 +5,7 @@
         <tr v-for="(score, index) in sortedScores">
           <th># {{ index + 1 }}</th>
           <td>{{ score.name }}</td>
-          <td>{{ score.score }}</td>
+          <td>{{ numberWithCommas(score.score) }}</td>
           <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
         </tr>
       </tbody>
@@ -30,6 +30,9 @@
     methods: {
       deleteItem(key) {
         this.$firebaseRefs.scores.child(key).remove();
+      },
+      numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       },
     },
     computed: {
