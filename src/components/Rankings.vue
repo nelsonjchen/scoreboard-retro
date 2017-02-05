@@ -1,9 +1,9 @@
 <template>
   <div>
-    <table class="ranking">
+    <table class="ranking table is-striped">
       <tbody>
         <tr v-for="(score, index) in sortedScores">
-          <th>{{ index + 1 }}</th>
+          <th># {{ index + 1 }}</th>
           <td>{{ score.name }}</td>
           <td>{{ score.score }}</td>
           <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
