@@ -1,9 +1,9 @@
 <template>
   <div>
-    <table class="ranking table is-striped">
+    <table class="ranking table">
       <tbody>
         <tr v-for="(score, index) in sortedScores">
-          <th># {{ index + 1 }}</th>
+          <th>#&nbsp{{ index + 1 }}</th>
           <td>{{ score.name }}</td>
           <td>{{ numberWithCommas(score.score) }}</td>
           <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
@@ -55,5 +55,20 @@
 <style scoped>
 .ranking {
   font-size: 2em;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  background-color: black;
+}
+
+.table tr:hover {
+  background-color: black;
+}
+
+.ranking th {
+  color: white !important
+}
+
+.table td, .table th {
+  border: none;
 }
 </style>

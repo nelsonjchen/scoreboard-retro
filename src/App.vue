@@ -5,7 +5,7 @@
         <img class="logo" src="./assets/logo.png">
       </div>
     </section>
-    <div class="section">
+    <div class="section bottom">
       <div class="container">
         <router-view></router-view>
       </div>
@@ -33,4 +33,9 @@ export default {
     background-color: #9e9133;
     min-height: 100vh;
   }
+
+  #app > div.section.bottom {
+    background-color: #9e9133;
+  }
+
 </style>
