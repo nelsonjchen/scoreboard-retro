@@ -4,11 +4,11 @@
     <div class="control">
       <label class="label">Name</label>
       <p class="control">
-        <input class="input" type="text" placeholder="Gamer McGamerface">
+        <input v-model="name" class="input" type="text" placeholder="Gamer McGamerface">
       </p>
       <label class="label">Score</label>
       <p class="control">
-        <input class="input" type="number" placeholder="8888">
+        <input v-modle="score"class="input" type="number" placeholder="8888">
       </p>
       <p class="control">
         <a class="button" @click="addOrUpdateScore">Update or Add Score</a>
@@ -34,7 +34,7 @@
     data() {
       return {
         name: '',
-        score: '',
+        score: 0,
       };
     },
     methods: {
