@@ -9,8 +9,8 @@
         >
           <tr v-for="(score, index) in sortedScores" :key="score.name">
             <th>#&nbsp{{ index + 1 }}</th>
-            <td>{{ score.name }}</td>
-            <td>{{ numberWithCommas(score.score) }}</td>
+            <td class="name">{{ score.name }}</td>
+            <td class="score">{{ numberWithCommas(score.score) }}</td>
             <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
           </tr>
         </transition-group>
@@ -79,5 +79,13 @@
 
 .table td, .table th {
   border: none;
+}
+
+td.name {
+  width: 100%;
+}
+
+td.score {
+  text-align: right;
 }
 </style>
