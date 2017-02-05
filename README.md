@@ -2,6 +2,8 @@
 
 > Retro Scoreboard
 
+Ripped Logo: http://cphthegamer.deviantart.com/art/Nintendo-World-Championships-1990-Logo-620207610
+
 ## Build Setup
 
 ``` bash
