@@ -1,14 +1,21 @@
 <template>
   <div>
     <h1 class="title">Admin View</h1>
-    <h1 class="subtitle">DEBUG!</h6>
-      <div class="control is-grouped">
-        <p class="control">
-          <a class="button" @click="addRandom">Add Random Name and Score</a>
-        </p>
-      </div>
-      <h1 class="title">Rankings</h1>
-      <rankings></rankings>
+    <div class="control">
+      <label class="label">Name</label>
+      <p class="control">
+        <input class="input" type="text" placeholder="Gamer McGamerface">
+      </p>
+      <label class="label">Score</label>
+      <p class="control">
+        <input class="input" type="number" placeholder="8888">
+      </p>
+      <p class="control">
+        <a class="button" @click="addOrUpdateScore">Update or Add Score</a>
+      </p>
+    </div>
+    <h1 class="title">Rankings Preview</h1>
+    <rankings></rankings>
   </div>
 </template>
 
@@ -26,7 +33,8 @@
     },
     data() {
       return {
-        scores: [],
+        name: '',
+        score: '',
       };
     },
     methods: {
@@ -38,6 +46,12 @@
           },
         );
       },
+      addOrUpdateScore() {
+        // Check for existing key
+        // Update if found
+        // Add if not.
+      },
     },
   };
+
 </script>
