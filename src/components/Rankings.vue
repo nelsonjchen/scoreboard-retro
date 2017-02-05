@@ -2,8 +2,8 @@
   <div>
     <table>
       <tbody>
-        <tr v-for="score in scores">
-          <th>1</th>
+        <tr v-for="(score, index) in scores">
+          <th>{{ index + 1 }}</th>
           <td>{{ score.name }}</td>
           <td>{{ score.score }}</td>
         </tr>
