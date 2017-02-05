@@ -22,10 +22,15 @@ export default {
 
 </script>
 
-<style scoped>
+<style >
   .logo {
     max-height: 40vh;
     margin: auto;
     display: block;
+  }
+
+  #app {
+    background-color: #9e9133;
+    min-height: 100vh;
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <table>
+    <table class="ranking">
       <tbody>
         <tr v-for="(score, index) in sortedScores">
           <th>{{ index + 1 }}</th>
@@ -48,3 +48,9 @@
     },
   };
 </script>
+
+<style scoped>
+.ranking {
+  font-size: 2em;
+}
+</style>
