@@ -11,7 +11,7 @@
         <input required v-model="score" class="input" type="number" placeholder="8888">
       </p>
       <p class="control">
-        <a class="button" @click="addOrUpdateScore">Update or Add Score</a>
+        <a :disabled="!validScore" class="button" @click="addOrUpdateScore">Update or Add Score</a>
       </p>
     </div>
     <!--<h2 class="subtitle">Debug</h2>
@@ -66,6 +66,13 @@
             });
           }
         });
+        this.name = '';
+        this.score = null;
+      },
+    },
+    computed: {
+      validScore() {
+        return this.name !== '' && this.score !== null;
       },
     },
   };
