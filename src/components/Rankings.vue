@@ -2,10 +2,10 @@
   <div>
     <table>
       <tbody>
-        <tr>
+        <tr v-for="score in scores">
           <th>1</th>
-          <td>Lolz</td>
-          <td>7890</td>
+          <td>{{ score.name }}</td>
+          <td>{{ score.score }}</td>
         </tr>
       </tbody>
     </table>

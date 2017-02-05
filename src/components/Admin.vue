@@ -1,23 +1,21 @@
 <template>
   <div>
-    <p>
-      Admin
-    </p>
-    <table>
-      <tbody>
-        <tr>
-          <th>1</th>
-          <td>Lolz</td>
-          <td>7890</td>
-        </tr>
-      </tbody>
-    </table>
+    <h1 class="title">Admin View</h1>
+    
+    <h1 class="title">Rankings</h1>
+    <rankings></rankings>
   </div>
 </template>
 
 <script>
+  // import db from 'db';
+  import Rankings from 'components/Rankings';
+
   export default {
     name: 'admin',
+    components: {
+      rankings: Rankings,
+    },
     data() {
       return {
         scores: [],
