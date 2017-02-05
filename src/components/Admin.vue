@@ -17,7 +17,7 @@
     <!--<h2 class="subtitle">Debug</h2>
     <p>{{ scoreKey }} <a class="button" @click="addRandom">AddRandom</a></p>-->
     <h1 class="title">Rankings Preview</h1>
-    <rankings></rankings>
+    <rankings admin="true"></rankings>
   </div>
 </template>
 

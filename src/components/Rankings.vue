@@ -6,6 +6,7 @@
           <th>{{ index + 1 }}</th>
           <td>{{ score.name }}</td>
           <td>{{ score.score }}</td>
+          <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
         </tr>
       </tbody>
     </table>
@@ -17,6 +18,7 @@
 
   export default {
     name: 'rankings',
+    props: ['admin'],
     firebase: {
       scores: db.ref('/scores'),
     },
@@ -24,6 +26,11 @@
       return {
         scores: [],
       };
+    },
+    methods: {
+      deleteItem(key) {
+        this.$firebaseRefs.scores.child(key).remove();
+      },
     },
     computed: {
       sortedScores() {
