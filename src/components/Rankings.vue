@@ -83,4 +83,8 @@
   td.score {
     text-align: right;
   }
+
+  .rankings-move {
+    transition: transform 1s;
+  }
 </style>
