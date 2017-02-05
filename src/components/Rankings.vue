@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import db from 'db';
+  import { scoresRef } from 'db';
   import 'animate.css/animate.css';
 
 
@@ -29,7 +29,7 @@
     name: 'rankings',
     props: ['admin'],
     firebase: {
-      scores: db.ref('/scores'),
+      scores: scoresRef,
     },
     data() {
       return {

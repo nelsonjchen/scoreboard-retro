@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import db from 'db';
+  import { scoresRef } from 'db';
   import Rankings from 'components/Rankings';
 
   export default {
@@ -31,7 +31,7 @@
       rankings: Rankings,
     },
     firebase: {
-      scores: db.ref('/scores'),
+      scores: scoresRef,
     },
     data() {
       return {
