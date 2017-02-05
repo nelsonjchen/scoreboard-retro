@@ -1,8 +1,5 @@
 <template>
   <div>
-    <p>
-      Rankings
-    </p>
     <table>
       <tbody>
         <tr>
@@ -16,15 +13,16 @@
 </template>
 
 <script>
+  import db from 'db';
+
   export default {
     name: 'rankings',
+    firebase: {
+      scores: db.ref('/scores'),
+    },
     data() {
       return {
-        contestants: [
-          { name: 'Bob Newbie', score: 56 },
-          { name: 'Betty Newbie', score: 2 },
-          { name: 'Michael Bachelor', score: 7 },
-        ],
+        scores: [],
       };
     },
   };

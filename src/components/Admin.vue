@@ -20,11 +20,7 @@
     name: 'admin',
     data() {
       return {
-        contestants: [
-          { name: 'Bob Newbie', score: 56 },
-          { name: 'Betty Newbie', score: 2 },
-          { name: 'Michael Bachelor', score: 7 },
-        ],
+        scores: [],
       };
     },
   };
