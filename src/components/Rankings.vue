@@ -1,21 +1,14 @@
 <template>
   <div>
     <table class="ranking table">
-      <tbody>
-        <transition-group
-        appear-class="flash"
-        name="rankings"
-        tag="tr"
-        >
-          <tr v-for="(score, index) in sortedScores" :key="score.name">
-            <th>#&nbsp{{ index + 1 }}</th>
-            <td class="name">{{ score.name }}</td>
-            <td class="score">{{ numberWithCommas(score.score) }}</td>
-            <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
-          </tr>
-        </transition-group>
-
-      </tbody>
+      <transition-group enter-active-class="animated flash" name="rankings" tag="tbody">
+        <tr v-for="(score, index) in sortedScores" :key="score.name">
+          <th>#&nbsp{{ index + 1 }}</th>
+          <td class="name">{{ score.name }}</td>
+          <td class="score">{{ numberWithCommas(score.score) }}</td>
+          <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
+        </tr>
+      </transition-group>
     </table>
   </div>
 </template>
@@ -59,33 +52,35 @@
       },
     },
   };
+
 </script>
 
 <style scoped>
-.ranking {
-  font-size: 2em;
-  font-family: 'Press Start 2P', cursive;
-  color: white;
-  background-color: black;
-}
+  .ranking {
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color: black;
+  }
 
-.table tr:hover {
-  background-color: black;
-}
+  .table tr:hover {
+    background-color: black;
+  }
 
-.ranking th {
-  color: white !important
-}
+  .ranking th {
+    color: white !important
+  }
 
-.table td, .table th {
-  border: none;
-}
+  .table td,
+  .table th {
+    border: none;
+  }
 
-td.name {
-  width: 100%;
-}
+  td.name {
+    width: 100%;
+  }
 
-td.score {
-  text-align: right;
-}
+  td.score {
+    text-align: right;
+  }
 </style>
