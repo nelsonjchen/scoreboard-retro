@@ -2,6 +2,10 @@
 
 > Retro Scoreboard
 
+Used for Southern California Retro Gaming Expo scoreboard for the World
+Champion Ships 1990 reproduction cartridge. Needed something that'll work from
+a phone.
+
 Ripped Logo: http://cphthegamer.deviantart.com/art/Nintendo-World-Championships-1990-Logo-620207610
 
 ## Build Setup
