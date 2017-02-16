@@ -2,9 +2,10 @@
 
 > Retro Scoreboard
 
-Used for Southern California Retro Gaming Expo scoreboard for the Nintendo World
-championship 1990 reproduction cartridge. Needed something that'll work from
-a phone and some pretty formatting for people coming in. This'll do.
+Used for Southern California Retro Gaming Expo scoreboard for the 
+Nintendo World championship 1990 reproduction cartridge. Needed 
+something that'll work from a phone and some pretty formatting 
+for people coming in. Need it in an hour or two. This'll do. 
 
 WARNING: No authentication setup. Be nice or just hide.
 
