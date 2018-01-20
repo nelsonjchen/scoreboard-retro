@@ -3,7 +3,7 @@
     <table class="ranking table">
       <transition-group enter-active-class="animated flash" name="rankings" tag="tbody">
         <tr v-for="(score, index) in sortedScores" :key="score.name">
-          <th>#&nbsp{{ index + 1 }}</th>
+          <th>#&nbsp;{{ index + 1 }}</th>
           <td class="name">{{ score.name }}</td>
           <td class="score">{{ numberWithCommas(score.score) }}</td>
           <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
