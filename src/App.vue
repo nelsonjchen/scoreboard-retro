@@ -33,6 +33,7 @@ export default {
     padding-top: 10px;
     align-items: center;
     display: flex;
+    overflow: scroll;
   }
 
   .logo {
