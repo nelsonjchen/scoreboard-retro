@@ -64,16 +64,19 @@
   .ranking {
     font-size: 3em;
     font-family: 'WebFont';
-    color: white;
-    background-color: black;
+    color:	gold;
+    background-color: darkred;
+    border-color: gold;
+    border: 3px;
+    border-style: solid inset solid solid;
   }
 
   .table tr:hover {
-    background-color: black;
+    background-color: darkred;
   }
 
   .ranking th {
-    color: white !important
+    color: gold !important
   }
 
   .table td,
@@ -83,6 +86,7 @@
 
   td.name {
     width: 100%;
+
   }
 
   td.score {
