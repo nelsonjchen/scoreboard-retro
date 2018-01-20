@@ -3,9 +3,9 @@
     <table class="ranking table">
       <transition-group enter-active-class="animated flash" name="rankings" tag="tbody">
         <tr v-for="(score, index) in sortedScores" :key="score.name">
-          <th>#&nbsp;{{ index + 1 }}</th>
-          <td class="name">{{ score.name }}</td>
-          <td class="score">{{ numberWithCommas(score.score) }}</td>
+          <th><span class="text">#&nbsp;{{ index + 1 }}</span></th>
+          <td class="name"><span class="text">{{ score.name }}</span></td>
+          <td class="score"><span class="text">{{ numberWithCommas(score.score) }}</span></td>
           <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
         </tr>
       </transition-group>
@@ -65,18 +65,10 @@
     font-size: 3em;
     font-family: 'WebFont';
     color:	gold;
-    background-color: darkred;
+    background-color: #330000;
     border-color: gold;
     border: 3px;
     border-style: solid inset solid solid;
-  }
-
-  .table tr:hover {
-    background-color: darkred;
-  }
-
-  .ranking th {
-    color: gold !important
   }
 
   .table td,
@@ -84,9 +76,16 @@
     border: none;
   }
 
+  span.text {
+    background:
+             -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+	  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   td.name {
     width: 100%;
-
   }
 
   td.score {
