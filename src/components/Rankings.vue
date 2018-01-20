@@ -71,6 +71,14 @@
     border-style: solid inset solid solid;
   }
 
+  .table tr:hover {
+    background-color: #330000;
+  }
+
+  .ranking th {
+    color: gold !important
+  }
+
   .table td,
   .table th {
     border: none;
@@ -79,7 +87,7 @@
   span.text {
     background:
              -webkit-linear-gradient(transparent, transparent),
-             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgb(230, 206, 114) 35%, rgb(218, 171, 95) 45%, rgba(145,112,59,1) 30%, rgb(213, 192, 109) 100%);
 	  -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
