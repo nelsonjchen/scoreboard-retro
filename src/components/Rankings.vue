@@ -62,7 +62,7 @@
   }
 
   .ranking {
-    font-size: 4.5em;
+    font-size: 3em;
     font-family: 'WebFont';
     color: white;
     background-color: black;

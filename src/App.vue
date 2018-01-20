@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <section>
-      <div class="container">
-        <img class="logo" src="./assets/logo.jpg">
+      <div class="container logobox">
+        <img class="logo" src="./assets/donkey_run.gif">
+        <img class="logo" src="./assets/banana.gif">
+        <img class="logo" src="./assets/game_logo.png">
+        <img class="logo" src="./assets/tournament_logo.png">
+        <img class="logo" src="./assets/banana.gif">
+        <img class="logo" src="./assets/diddy_run.gif">
       </div>
     </section>
     <div class="section bottom">
@@ -24,20 +29,28 @@ export default {
 
 <style >
 
+  .logobox {
+    padding-top: 10px;
+    align-items: center;
+    display: flex;
+  }
+
   .logo {
-    max-height: 25vh;
+    max-height: 20vh;
     margin: auto;
-    display: block;
-    border: solid 1px;
+    display: inline;
+    /* border: solid 1px; */
+
   }
 
   #app {
-    background-color: gray;
+    /* background-color: gray; */
     min-height: 100vh;
-    background-image: url("./assets/background.png");
+    background-image: url("./assets/background.png"), linear-gradient(to bottom, #1e5799 0%,#060419 19%,#c9c9c9 33%,#e5e544 54%);
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,060419+19,c9c9c9+33,e5e5e5+100 */
   }
 
   #app > div.section.bottom {
