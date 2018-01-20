@@ -6,12 +6,19 @@
       <p class="control">
         <input ref="name" required v-model="name" class="input" type="text" placeholder="Gamer McGamerface">
       </p>
+      <label class="label">Contact Info</label>
+      <p class="control">
+        <input required v-model="contact" class="input" type="text" placeholder="Phone, Email, whatever, Twitter(?)">
+      </p>
       <label class="label">Score</label>
       <p class="control">
         <input required v-model="score" class="input" type="number" placeholder="8888" @keyup.enter="addOrUpdateScore">
       </p>
       <p class="control">
-        <a :disabled="!validScore" class="button" @click="addOrUpdateScore">Update or Add Score</a>
+        <a :disabled="!validScore" class="button" @click="addOrUpdateScore">Update or Add Score (Add Contact if provided)</a>
+      </p>
+      <p class="control">
+        <a :disabled="!validContact" class="button" @click="updateContact">Update Contact</a>
       </p>
     </div>
     <!--<h2 class="subtitle">Debug</h2>
@@ -36,6 +43,7 @@
     data() {
       return {
         name: '',
+        contact: '',
         score: null,
         scoreKey: 'Blank',
       };
@@ -58,6 +66,7 @@
             this.$firebaseRefs.scores.push(
               {
                 name: this.name,
+                contact: this.contact,
                 score: this.score,
               },
             );
@@ -70,13 +79,37 @@
           }
         });
         this.name = '';
+        this.contact = '';
         this.score = null;
+
+        this.$refs.name.focus();
+      },
+      updateContact() {
+        if (!(this.validContact)) {
+          return;
+        }
+        this.$firebaseRefs.scores.orderByChild('name').equalTo(this.name).limitToFirst(1).once('value', (snapshot) => {
+          if (snapshot.val() !== null) {
+            snapshot.forEach((child) => {
+              snapshot.ref.child(child.key).update({
+                contact: this.contact,
+              });
+            });
+          }
+        });
+        this.name = '';
+        this.contact = '';
+        this.score = null;
+
         this.$refs.name.focus();
       },
     },
     computed: {
       validScore() {
         return this.name !== '' && this.score !== null;
+      },
+      validContact() {
+        return this.name !== '' && this.contact !== '';
       },
     },
   };

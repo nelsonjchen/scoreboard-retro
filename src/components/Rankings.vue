@@ -6,6 +6,7 @@
           <th><span class="text">#&nbsp;{{ index + 1 }}</span></th>
           <td class="name"><span class="text">{{ score.name }}</span></td>
           <td class="score"><span class="text">{{ numberWithCommas(score.score) }}</span></td>
+          <td v-if="admin" class="contact"><span class="">{{ score.contact }}</span></td>
           <td v-if="admin"><a @click="deleteItem(score['.key'])"> ❌ </a></td>
         </tr>
       </transition-group>
@@ -34,6 +35,9 @@
         this.$firebaseRefs.scores.child(key).remove();
       },
       numberWithCommas(x) {
+        if (x === undefined) {
+          return '?';
+        }
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       },
     },
@@ -103,5 +107,15 @@
 
   .rankings-move {
     transition: transform 1s;
+  }
+
+  .contact {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: white;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
   }
 </style>
