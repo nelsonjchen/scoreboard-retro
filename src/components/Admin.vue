@@ -12,7 +12,7 @@
       </p>
       <label class="label">Contact Info</label>
       <p class="control">
-        <input required v-model="contact" class="input" type="text" placeholder="Phone, Email, whatever, Twitter(?)">
+        <input required v-model="contact" class="input" type="text" placeholder="Phone, Email, whatever, Twitter(?)" @keyup.enter="addOrUpdate">
       </p>
       <p class="control">
         <a :disabled="!validUpdate" class="button" @click="addOrUpdate">Update or Add Score/Contact</a>
