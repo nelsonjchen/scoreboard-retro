@@ -2,7 +2,7 @@
   <div id="app">
     <section>
       <div class="container">
-        <img class="logo" src="./assets/logo.png">
+        <img class="logo" src="./assets/logo.jpg">
       </div>
     </section>
     <div class="section bottom">
@@ -27,15 +27,16 @@ export default {
     max-height: 25vh;
     margin: auto;
     display: block;
+    border: solid 1px;
   }
 
   #app {
-    background-color: #9e9133;
+    background-color: gray;
     min-height: 100vh;
   }
 
   #app > div.section.bottom {
-    background-color: #9e9133;
+    background-color: gray;
   }
 
 </style>
