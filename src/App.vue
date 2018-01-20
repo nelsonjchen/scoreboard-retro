@@ -37,7 +37,7 @@ export default {
   }
 
   .logo {
-    max-height: 20vh;
+    max-height: 100px;
     margin: auto;
     display: inline;
     /* border: solid 1px; */
@@ -58,4 +58,37 @@ export default {
     background-color: rgba(0, 0, 0, 0)
   }
 
+  html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  ::-webkit-scrollbar {
+      height: 12px;
+      width: 12px;
+      background: goldenrod;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: gold;
+      -webkit-border-radius: 1ex;
+      -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+  }
+
+  ::-webkit-scrollbar-corner {
+  }
+
+  ::-webkit-scrollbar {
+      width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
 </style>
