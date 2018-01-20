@@ -44,6 +44,13 @@
     computed: {
       sortedScores() {
         function compare(a, b) {
+          if (a.score === undefined) {
+            return 1;
+          }
+          if (b.score === undefined) {
+            return -1;
+          }
+
           if (a.score < b.score) {
             return 1;
           }
