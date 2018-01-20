@@ -64,7 +64,7 @@
   .ranking {
     font-size: 3em;
     font-family: 'WebFont';
-    color:	gold;
+    color:	goldenrod;
     background-color: #330000;
     border-color: gold;
     border: 3px;
@@ -87,7 +87,7 @@
   span.text {
     background:
              -webkit-linear-gradient(transparent, transparent),
-             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgb(230, 206, 114) 35%, rgb(218, 171, 95) 45%, rgba(145,112,59,1) 30%, rgb(213, 192, 109) 100%);
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgb(230, 206, 114) 35%, rgb(218, 171, 95) 45%, rgb(186, 154, 76) 30%, rgb(213, 192, 109) 100%);
 	  -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
