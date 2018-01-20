@@ -67,6 +67,7 @@
     color:	goldenrod;
     background-color: #330000;
     border-color: gold;
+    border-right-color: gold;
     border: 3px;
     border-style: solid inset solid solid;
   }
