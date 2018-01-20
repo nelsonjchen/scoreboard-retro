@@ -65,7 +65,7 @@ export default {
 
   ::-webkit-scrollbar {
       height: 12px;
-      width: 12px;
+      width: 0px;
       background: goldenrod;
   }
 
