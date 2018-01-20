@@ -79,7 +79,7 @@ export default {
   }
 
   ::-webkit-scrollbar {
-      width: 12px;
+      width: 0px;
   }
 
   ::-webkit-scrollbar-track {
