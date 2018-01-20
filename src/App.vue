@@ -23,6 +23,7 @@ export default {
 </script>
 
 <style >
+
   .logo {
     max-height: 25vh;
     margin: auto;
@@ -33,10 +34,14 @@ export default {
   #app {
     background-color: gray;
     min-height: 100vh;
+    background-image: url("./assets/background.png");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
   }
 
   #app > div.section.bottom {
-    background-color: gray;
+    background-color: rgba(0, 0, 0, 0)
   }
 
 </style>

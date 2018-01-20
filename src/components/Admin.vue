@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="admin">
     <h1 class="title">Admin View</h1>
     <div class="control">
       <label class="label">Name</label>
@@ -81,3 +81,9 @@
     },
   };
 </script>
+
+<style scoped>
+  .admin {
+    background-color: wheat;
+  }
+</style>

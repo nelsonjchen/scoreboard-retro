@@ -56,9 +56,14 @@
 </script>
 
 <style scoped>
+  @font-face {
+    font-family: 'WebFont';
+    src:  url('../assets/font.ttf')  format('truetype');
+  }
+
   .ranking {
-    font-size: 2em;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 4.5em;
+    font-family: 'WebFont';
     color: white;
     background-color: black;
   }
