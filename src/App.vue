@@ -11,7 +11,7 @@
       </div>
     </section>
     <div class="section bottom">
-      <div class="container">
+      <div class="">
         <router-view></router-view>
       </div>
     </div>
@@ -58,6 +58,7 @@ export default {
     background-color: rgba(0, 0, 0, 0)
   }
 
+
   html {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -92,5 +93,5 @@ export default {
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   }
 
-  
+
 </style>

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Admin from 'components/Admin';
-import Rankings from 'components/Rankings';
+import ColumnRankings from 'components/ColumnRankings';
 
 Vue.use(Router);
 
@@ -11,7 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'Ranking',
-      component: Rankings,
+      component: ColumnRankings,
     },
     {
       path: '/admin',
