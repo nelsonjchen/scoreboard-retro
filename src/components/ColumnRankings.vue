@@ -154,6 +154,7 @@
     align-items: flex-start;
     width: 100%;
     overflow: auto;
+    padding:10px;
   }
 
   .entry {
