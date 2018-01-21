@@ -1,29 +1,29 @@
 <template>
-  <div class="columns">
-    <div class="top column">
-      <table class="ranking table">
-        <transition-group enter-active-class="animated flash" name="rankings" tag="tbody">
-          <tr v-for="(score, index) in top" :key="score.name">
-            <th><span class="text">#&nbsp;{{ index + 1 }}</span></th>
-            <td class="name"><span class="text">{{ score.name }}</span></td>
-            <td class="score"><span class="text">{{ numberWithCommas(score.score) }}</span></td>
-          </tr>
-        </transition-group>
-      </table>
+  <div>
+      <transition-group enter-active-class="animated flash" name="rankings" tag="div" class="entries">
+        <div class="top entry" v-for="(score, index) in top" :key="score.name">
+          <table class="ranking table">
+            <tr>
+              <th><span class="text">#&nbsp;{{ index + 1 }}</span></th>
+              <td class="name"><span class="text">{{ score.name }}</span></td>
+              <td class="score"><span class="text">{{ numberWithCommas(score.score) }}</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="rest entry" v-for="(score, index) in rest" :key="score.name">
+          <table class="ranking table">
+            <tr>
+              <th><span class="text">#&nbsp;{{ index + 4 }}</span></th>
+              <td class="name"><span class="text">{{ score.name }}</span></td>
+              <td class="score"><span class="text">{{ numberWithCommas(score.score) }}</span>
+              </td>
+            </tr>
+          </table>
+        </div>
     </div>
-    <div class="rest column">
-      <table class="ranking table">
-        <transition-group enter-active-class="animated flash" name="rankings" tag="tbody">
-          <tr v-for="(score, index) in rest" :key="score.name">
-            <th><span class="text">#&nbsp;{{ index + 1 + 3 }}</span></th>
-            <td class="name"><span class="text">{{ score.name }}</span></td>
-            <td class="score"><span class="text">{{ numberWithCommas(score.score) }}</span></td>
-          </tr>
-        </transition-group>
-      </table>
-    </div>
+</div>
 
-  </div>
 </template>
 
 <script>
@@ -89,12 +89,9 @@
     font-family: 'WebFont';
     src:  url('../assets/font.ttf')  format('truetype');
   }
-  .rest {
-
-  }
 
   .ranking {
-    font-size: 2em;
+    font-size: 1.8em;
     font-family: 'WebFont';
     color:	goldenrod;
     background-color: #330000;
@@ -104,9 +101,6 @@
     border-style: solid inset solid solid;
   }
 
-  .top .ranking {
-    font-size: 3.7em;
-  }
 
   .table tr:hover {
     background-color: #330000;
@@ -150,4 +144,74 @@
     border-style: solid;
     text-align: center;
   }
+
+  .entries {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80vh;
+    align-content: flex-start;
+    width: 100%;
+  }
+
+  .entry {
+    width: 30%;
+    height: auto;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 0;
+  }
+
+  .entry table {
+    margin-bottom: 0;
+  }
+
+  .top.entry {
+    font-size: 1.3em;
+    transition: all 0.5s;
+  }
+
+  .top th {
+    padding-right: 0px;
+  }
+
+  .entries .entry:nth-child(1) {
+    animation: glow-gold 1s infinite alternate;
+  }
+
+  .entries .entry:nth-child(2) {
+    animation: glow-silver 1s infinite alternate;
+  }
+
+  .entries .entry:nth-child(3) {
+    animation: glow-bronze 1s infinite alternate;
+  }
+
+  @keyframes glow-gold {
+    from {
+      box-shadow: 0 0 10px -10px gold;
+    }
+    to {
+      box-shadow: 0 0 10px 10px gold;
+    }
+  }
+
+  @keyframes glow-silver {
+    from {
+      box-shadow: 0 0 10px -10px silver;
+    }
+    to {
+      box-shadow: 0 0 10px 10px silver;
+    }
+  }
+
+  @keyframes glow-bronze {
+    from {
+      box-shadow: 0 0 10px -10px #b87333;
+    }
+    to {
+      box-shadow: 0 0 10px 10px #b87333;
+    }
+  }
+
 </style>
