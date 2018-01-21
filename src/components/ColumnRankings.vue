@@ -158,7 +158,7 @@
     width: 30%;
     height: auto;
     margin-right: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding-bottom: 0;
   }
 
