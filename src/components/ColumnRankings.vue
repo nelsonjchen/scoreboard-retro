@@ -96,7 +96,6 @@
     color:	goldenrod;
     background-color: #330000;
     border-color: gold;
-    border-right-color: gold;
     border-width: 3px;
     border-style: solid inset solid solid;
   }
@@ -115,12 +114,23 @@
     border: none;
   }
 
+  .name {
+    max-width: 60px;
+    overflow: hidden;
+  }
+
+  .score {
+    background-color: #441010;
+  }
+
+
   span.text {
     background:
              -webkit-linear-gradient(transparent, transparent),
              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgb(230, 206, 114) 35%, rgb(218, 171, 95) 45%, rgb(186, 154, 76) 30%, rgb(213, 192, 109) 100%);
 	  -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    white-space: nowrap;
   }
 
   td.name {
@@ -179,15 +189,30 @@
   }
 
   .entries .entry:nth-child(1) {
+    border-color: gold;
     animation: glow-gold 1s infinite alternate;
   }
 
+  .entries .entry:nth-child(1) .ranking {
+    border-color: gold;
+  }
+
   .entries .entry:nth-child(2) {
+    border-color: silver;
     animation: glow-silver 1s infinite alternate;
   }
 
+  .entries .entry:nth-child(2) .ranking {
+    border-color: silver;
+  }
+
   .entries .entry:nth-child(3) {
+
     animation: glow-bronze 1s infinite alternate;
+  }
+
+  .entries .entry:nth-child(3) .ranking {
+    border-color: #b87333;
   }
 
   @keyframes glow-gold {
