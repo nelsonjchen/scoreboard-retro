@@ -151,7 +151,9 @@
     flex-wrap: wrap;
     height: 80vh;
     align-content: flex-start;
+    align-items: flex-start;
     width: 100%;
+    overflow: auto;
   }
 
   .entry {
